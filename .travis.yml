@@ -1,3 +1,6 @@
 language: node_js
 node_js: node
-after_success: npm run coverage
+sudo: required
+addons:
+  chrome: stable
+after_success: npm run report-coverage

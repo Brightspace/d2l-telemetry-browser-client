@@ -1,2 +1,3 @@
-export class d2lTelemetryBrowserClient {
-}
+import {Client} from './client';
+
+module.exports.Client = Client;
