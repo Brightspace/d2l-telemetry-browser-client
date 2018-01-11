@@ -1,10 +1,19 @@
 language: node_js
 node_js: node
 sudo: required
+script:
+- npm run lint
+- npm run test:unit
+- npm run test:unit:sauce
+after_success: npm run report-coverage
 addons:
   chrome: stable
-after_success: npm run report-coverage
+  jwt:
+    secure: fV6M8/p/Cy8dGyKMGjAoiGx/yxUc866yFfjTyJ6EpbPeerdZnpPkCVbMS+OcKHa3Y/RmD6Y+B/VM3sv6afRReu7by/asBsQCA1EJ480ItZ2eLLVObwEtNRTO8qj9YJMDya2Q3KnZJu8lQL+gZXwPariGVfNrleH9hK+uNpq5ToSl+nO9yiUUn0XS4CEJDJni28c0siLnQqkl2iNjReEFhtbEDYGrta0ni1BFIdjPPSJ+L9zWPJBS7hSc8nbVJblcSAF89hBCNL8wttrVzH7CewCV01UdPIKNKMhVYv56Mx/cOUGKAQ8UEt1xBRNhANJb+mwSSginIiYfo1NP5zm/aZIXCy1Okyvqm8XzMI9Qkw1MxRdex+QNLhVARYuVzUtJmvMDLmwD860KubwmOWDXwzVTIBatNTY0FSZyJZ6RSXspRDdOngDfkZlnH8J+/KfbSidBjOIRRzFWyGDQgLFagjcFnBINbaQb0+CPaeM8d1W4pJcYbop0SDr+4QXTaeg3ed1JR+XWxXKRFRomEMt5ANDBSH123607wTpphJKh/VXwJMBnD52XH/KMeimsunAKkjYlGdEI0mVQzZ/LQO+MdBHu4Hm+wW4vBbMWx50mVJAKJQJcbIE19vZ5+iVrXGccY+P+a5i4brAd3bafnSYHBHCcwPn9m/zeR9qTFdnl7Ss=
 cache:
   yarn: true
   directories:
-    - node_modules
+  - node_modules
+env:
+  global:
+  - SAUCE_USERNAME: Desire2Learn
