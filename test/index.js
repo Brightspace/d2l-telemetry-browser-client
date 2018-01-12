@@ -1,8 +1,4 @@
-const chai = require('chai'),
-	expect = chai.expect,
-	telemetryClient = require('../src/index').Client;
-
-chai.should();
+const telemetryClient = require('../src/index').Client;
 
 describe('test suite', () => {
 
