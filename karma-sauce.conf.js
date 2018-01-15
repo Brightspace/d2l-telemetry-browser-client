@@ -51,12 +51,12 @@ module.exports = function(config) {
 		customLaunchers: customLaunchers,
 		frameworks: ['mocha', 'chai', 'browserify'],
 		files: [
-			'test/**/*.js'
+			'test/index.js'
 		],
 		logLevel: config.LOG_WARN,
 		port: 9876,
 		preprocessors: {
-			'test/**/*.js': ['browserify']
+			'test/index.js': ['browserify']
 		},
 		reporters: ['progress', 'saucelabs'],
 		sauceLabs: {
