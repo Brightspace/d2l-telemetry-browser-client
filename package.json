@@ -1,5 +1,6 @@
 {
   "name": "d2l-telemetry-browser-client",
+  "version": "0.0.1",
   "description": "Client for sending telemetry from the browser to a telemetry service",
   "private": true,
   "main": "src/index.js",
