@@ -16,12 +16,14 @@ module.exports = function(config) {
 		},
 		frameworks: ['mocha', 'chai', 'browserify'],
 		files: [
-			'test/index.js'
+			'test/index.js',
+			'test/event.js'
 		],
 		logLevel: config.LOG_WARN,
 		port: 9876,
 		preprocessors: {
-			'test/index.js': ['browserify']
+			'test/index.js': ['browserify'],
+			'test/event.js': ['browserify']
 		},
 		reporters: ['progress', 'coverage'],
 		singleRun: true

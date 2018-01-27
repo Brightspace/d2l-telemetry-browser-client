@@ -6,15 +6,8 @@ describe('test suite', () => {
 		expect(telemetryClient).to.not.be.undefined;
 	});
 
-	it('should have method1', () => {
+	it('should have logUserEvent', () => {
 		const client = new telemetryClient();
-		expect(client.method1).to.not.be.undefined;
+		expect(client.logUserEvent).to.not.be.undefined;
 	});
-
-	it('should return "foo" from method1', () => {
-		const client = new telemetryClient();
-		const val = client.method1();
-		expect(val).to.equal('foo');
-	});
-
 });
