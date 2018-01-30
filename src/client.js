@@ -4,11 +4,7 @@ export class Client {
 	}
 
 	logUserEvent(event) {
-		var headersObject = {
-		};
-
 		var requestObject = {
-			headers: new Headers(headersObject),
 			method: 'POST'
 		};
 

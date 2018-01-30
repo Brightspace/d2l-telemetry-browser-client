@@ -22,5 +22,5 @@ describe('test suite', () => {
 			const val = event.setSourceId('abc');
 			expect(val).to.equal(event);
 		});
-	})
+	});
 });
