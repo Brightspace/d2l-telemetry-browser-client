@@ -18,6 +18,11 @@ export class EventBody {
 		return this;
 	}
 
+	setTenantUrl(tenantUrl) {
+		this._tenantUrl = tenantUrl;
+		return this;
+	}
+
 	setContext(id, type) {
 		this._context = {
 			Id: id,
@@ -59,6 +64,7 @@ export class EventBody {
 		const json = {};
 		json.EventTypeGuid = this._eventTypeGuid;
 		json.Action = this._action;
+		json.TenantUrl = this._tenantUrl;
 		if (this._date) {
 			json.Date = this._date.toISOString();
 		}
