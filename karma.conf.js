@@ -3,7 +3,7 @@ module.exports = function(config) {
 		autoWatch: false,
 		browserify: {
 			debug: true,
-			"transform": ["babelify"]
+			'transform': ['babelify']
 		},
 		browsers: ['ChromeHeadless'],
 		colors: true,
@@ -16,16 +16,17 @@ module.exports = function(config) {
 		},
 		frameworks: ['mocha', 'chai', 'browserify'],
 		files: [
-			'test/index.js',
-			'test/event.js'
+			'test/*'
+		],
+		exclude: [
+			'test/bundle.js'
 		],
 		logLevel: config.LOG_WARN,
 		port: 9876,
 		preprocessors: {
-			'test/index.js': ['browserify'],
-			'test/event.js': ['browserify']
+			'test/*': ['browserify']
 		},
 		reporters: ['progress', 'coverage'],
 		singleRun: true
-	})
-}
+	});
+};

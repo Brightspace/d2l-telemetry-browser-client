@@ -1,26 +1,43 @@
 describe('test suite', () => {
 
-	describe('client', () => {
+	describe('bundle', () => {
 		it('should have "d2lTelemetryBrowserClient" defined as a global variable', () => {
 			expect(window['d2lTelemetryBrowserClient']).to.not.be.undefined;
 		});
+	});
 
-		it('should have logUserEvent', () => {
+	describe('client', () => {
+		it('should have a Client ctor', () => {
 			const client = new window['d2lTelemetryBrowserClient'].Client();
 			expect(client.logUserEvent).to.not.be.undefined;
 		});
 	});
 
 	describe('event', () => {
-		it('should have method setSourceId', () => {
+		it('should have an Event ctor', () => {
 			const event = new window['d2lTelemetryBrowserClient'].Event();
-			expect(event.setSourceId).to.not.be.undefined;
+			expect(event.setType).to.not.be.undefined;
 		});
+	});
 
-		it('should return self from methods', () => {
-			const event = new window['d2lTelemetryBrowserClient'].Event();
-			const val = event.setSourceId('abc');
-			expect(val).to.equal(event);
+	describe('eventBody', () => {
+		it('should have an EventBody ctor', () => {
+			const eventBody = new window['d2lTelemetryBrowserClient'].EventBody();
+			expect(eventBody.setTypeGuid).to.not.be.undefined;
+		});
+	});
+
+	describe('performanceEventBody', () => {
+		it('should have a PerformanceEventBody ctor', () => {
+			const performanceEventBody = new window['d2lTelemetryBrowserClient'].PerformanceEventBody();
+			expect(performanceEventBody.addUserTiming).to.not.be.undefined;
+		});
+	});
+
+	describe('problemEventBody', () => {
+		it('should have a ProblemEventBody ctor', () => {
+			const problemEventBody = new window['d2lTelemetryBrowserClient'].ProblemEventBody();
+			expect(problemEventBody.setProblemType).to.not.be.undefined;
 		});
 	});
 });

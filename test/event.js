@@ -1,19 +1,30 @@
 const Event = require('../src/index').Event;
+const EventBody = require('../src/index').EventBody;
 
-describe('test suite', () => {
+describe('Event', () => {
+	var event;
 
-	it('should be defined', () => {
-		expect(Event).to.not.be.undefined;
-	});
-
-	it('should have setSourceId', () => {
-		const event = new Event();
-		expect(event.setSourceId).to.not.be.undefined;
+	beforeEach(() => {
+		event = new Event();
 	});
 
 	it('should return self from methods', () => {
-		const event = new Event();
 		expect(event.setSourceId('abc')).to.equal(event);
+	});
+
+	it('should generate JSON body', () => {
+		event.setSourceId('MySource');
+		event.setType('MyType');
+		event.setDate(new Date(Date.UTC(96, 1, 2, 3, 4, 5)));
+		event.setBody(new EventBody());
+
+		expect(event.toJSON()).to.include({
+			SourceId: 'MySource',
+			EventType: 'MyType',
+			Date: '1996-02-02T03:04:05.000Z'
+		});
+
+		expect(event.toJSON()).to.have.property('EventBody');
 	});
 
 });
