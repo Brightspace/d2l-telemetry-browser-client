@@ -48,7 +48,8 @@
   },
   "babel": {
     "presets": [
-      "env"
+      "env",
+      "es2015"
     ],
     "env": {
       "test": {
