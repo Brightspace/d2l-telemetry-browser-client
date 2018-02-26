@@ -60,6 +60,11 @@ export class EventBody {
 		return this;
 	}
 
+	setCustomJson(value) {
+		this._customJson = value;
+		return this;
+	}
+
 	toJSON() {
 		const json = {};
 		json.EventTypeGuid = this._eventTypeGuid;
@@ -79,6 +84,9 @@ export class EventBody {
 		}
 		if (this._custom) {
 			json.Custom = this._custom;
+		}
+		if (this._customJson) {
+			json.CustomJson = this._customJson;
 		}
 		return json;
 	}
