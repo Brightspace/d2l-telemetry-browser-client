@@ -42,7 +42,7 @@ module.exports = function(config) {
 		autoWatch: false,
 		browserify: {
 			debug: true,
-			"transform": ["babelify"]
+			'transform': ['babelify']
 		},
 		browsers: Object.keys(customLaunchers),
 		captureTimeout: 120000,
@@ -51,6 +51,8 @@ module.exports = function(config) {
 		customLaunchers: customLaunchers,
 		frameworks: ['mocha', 'chai', 'browserify'],
 		files: [
+			'node_modules/promise-polyfill/dist/polyfill.js',
+			'node_modules/whatwg-fetch/fetch.js',
 			'test/index.js'
 		],
 		logLevel: config.LOG_WARN,
@@ -63,5 +65,5 @@ module.exports = function(config) {
 			testName: 'd2l-telemetry-browser-client tests'
 		},
 		singleRun: true
-	})
-}
+	});
+};

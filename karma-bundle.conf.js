@@ -13,5 +13,5 @@ module.exports = function(config) {
 		port: 9876,
 		reporters: ['progress'],
 		singleRun: true
-	})
-}
+	});
+};
