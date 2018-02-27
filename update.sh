@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+echo "Generating HTML import and publishing to CDN"
+
 if ! [ "$TRAVIS_BRANCH" == "master" ] || ! [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 	echo "Version is only bumped on master"
 	exit 0

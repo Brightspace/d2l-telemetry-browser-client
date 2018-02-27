@@ -27,7 +27,7 @@
       "moduleType": "lib",
       "targetDirectory": "d2l-telemetry-browser-client",
       "creds": {
-        "key": "AKIAJYZ3X3B3O6UZIFAQ",
+        "key": "AKIAIA66UIEEOZM63VEQ",
         "secretVar": "CDN_SECRET"
       },
       "devTagVar": "TRAVIS_COMMIT",
