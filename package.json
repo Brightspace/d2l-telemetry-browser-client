@@ -21,6 +21,19 @@
   },
   "author": "D2L Corporation",
   "license": "Apache-2.0",
+  "config": {
+    "frauPublisher": {
+      "files": "./dist/**",
+      "moduleType": "lib",
+      "targetDirectory": "d2l-telemetry-browser-client",
+      "creds": {
+        "key": "AKIAJYZ3X3B3O6UZIFAQ",
+        "secretVar": "CDN_SECRET"
+      },
+      "devTagVar": "TRAVIS_COMMIT",
+      "versionVar": "TRAVIS_TAG"
+    }
+  },
   "devDependencies": {
     "babel-plugin-istanbul": "^4.1.5",
     "babel-preset-env": "^1.6.1",

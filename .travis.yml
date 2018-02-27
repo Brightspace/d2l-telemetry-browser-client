@@ -6,7 +6,9 @@ script:
 - npm run test:unit
 - npm run test:bundle
 - npm run test:sauce
-after_success: npm run report-coverage
+after_success:
+- npm run report-coverage
+- ./update.sh
 addons:
   chrome: stable
   jwt:
@@ -18,3 +20,5 @@ cache:
 env:
   global:
   - SAUCE_USERNAME: Desire2Learn
+  # GITHUB_RELEASE_TOKEN
+  - secure: oOypFGViw2h3sU3U8MWAFNYb9E6KY+EX4Ltcd6AK1/NVT+7m+SKuTR6HfWcYMYSGZtJUA9I68LepGhbMQXmOEVOxf1d2kcmmcvqldzBon+MHeZ8ozvOMiQj/UYY2GpglSXjin/6kW+f4g92TX4Rio6x2fnj1fYj48k4HqBRPET/6j32Itlw+0q0VJ+D7CUugUtzMC7JDhdrfugyvUs1iy3GQnkeMIPoswLhcyDQ+VH/BAZvtzjCbV7qvUvs3JdPZg948SdGWfGJBrmc48u16PstldqWrKsDFtlvkFvWeFsM5loQybXH546fviED2WFRYLUT+bXItUxvyU5AkxZMMnU1OMO+Qu2UWPq+jyPdckDlZeidcNrk2ywYYCwnz5l8ngWK4xMDlTS5soyTnd4VZi36OxAkryzRX9+l+hgYOVt/fsXbjBVP4zTcPi2+1j2Z9BeqJ1eUHFOUSiXDckhokyIdzvB7Ar5Ze+4MA4RwjP4HR3qWWQmRVI/husQcuAnYNRxqF/Tw1r08KyRdj2BF3lmD6hFS1hR0vN+S8J0UeLLINZGsHGVC96qscGzacc0DCnntHtcOb/EN5qN6aQNz5DJg+kpslTZGm8QYKeIz2J/a3UwoZcM2FgBhQCvehQ5BA4kiXeNbWHMGlaeC26OteDgV/g4wtt6x60FnPivrNVf4=
