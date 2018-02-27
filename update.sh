@@ -9,7 +9,7 @@ echo "Generating HTML import and publishing to CDN"
 # fi
 
 lastVersion=$(git describe --abbrev=0)
-versionRegex='^([0-9]+)\.([0-9]+)\.([0-9]+)$'
+versionRegex='^v([0-9]+)\.([0-9]+)\.([0-9]+)$'
 if ! [[ $lastVersion =~ $versionRegex ]]; then
 	echo $lastVersion "is not a valid semver string"
 	exit 1
