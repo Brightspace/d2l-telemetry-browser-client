@@ -3,10 +3,10 @@ set -e
 
 echo "Generating HTML import and publishing to CDN"
 
-if ! [ "$TRAVIS_BRANCH" == "master" ] || ! [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-	echo "Version is only bumped on master"
-	exit 0
-fi
+# if ! [ "$TRAVIS_BRANCH" == "master" ] || ! [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+# 	echo "Version is only bumped on master"
+# 	exit 0
+# fi
 
 lastVersion=$(git describe --abbrev=0)
 versionRegex='^([0-9]+)\.([0-9]+)\.([0-9]+)$'
