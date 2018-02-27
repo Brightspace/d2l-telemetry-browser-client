@@ -38,6 +38,9 @@ fi
 newVersion="${majorVersion}.${minorVersion}.${patchVersion}"
 
 # Add the upstream using GITHUB_RELEASE_TOKEN
+echo 'Release token'
+echo ${GITHUB_RELEASE_TOKEN}
+
 git remote add upstream "https://${GITHUB_RELEASE_TOKEN}@github.com/Brightspace/d2l-telemetry-browser-client.git"
 
 # Pull the merge commit
