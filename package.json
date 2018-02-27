@@ -13,7 +13,10 @@
     "test:bundle": "karma start karma-bundle.conf.js",
     "test:unit": "cross-env NODE_ENV=test karma start karma.conf.js",
     "test:sauce": "cross-env NODE_ENV=test karma start karma-sauce.conf.js",
-    "report-coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "report-coverage": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "publish-location": "node publishLocation",
+    "prepublish-release": "npm run build",
+    "publish-release": "frau-publisher && npm run publish-location"
   },
   "repository": {
     "type": "git",
@@ -47,6 +50,7 @@
     "deumdify": "^1.2.5",
     "eslint": "^4.15.0",
     "eslint-config-brightspace": "^0.3.1",
+    "frau-publisher": "^2.6.2",
     "karma": "^2.0.0",
     "karma-browserify": "^5.1.3",
     "karma-chai": "^0.1.0",

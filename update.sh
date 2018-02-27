@@ -3,10 +3,10 @@ set -e
 
 echo "Generating HTML import and publishing to CDN"
 
-# if ! [ "$TRAVIS_BRANCH" == "master" ] || ! [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
-# 	echo "Version is only bumped on master"
-# 	exit 0
-# fi
+if ! [ "$TRAVIS_BRANCH" == "master" ] || ! [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+	echo "Version is only bumped on master"
+	exit 0
+fi
 
 lastVersion=$(git describe --abbrev=0)
 versionRegex='^v([0-9]+)\.([0-9]+)\.([0-9]+)$'
@@ -71,4 +71,4 @@ git push upstream HEAD:master --tags
 
 # Publish the release via frau-publisher
 export TRAVIS_TAG=$newVersion
-# npm run publish-release
+npm run publish-release

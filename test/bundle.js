@@ -14,8 +14,8 @@ describe('test suite', () => {
 	});
 
 	describe('event', () => {
-		it('should have an Event ctor', () => {
-			const event = new window['d2lTelemetryBrowserClient'].Event();
+		it('should have a TelemetryEvent ctor', () => {
+			const event = new window['d2lTelemetryBrowserClient'].TelemetryEvent();
 			expect(event.setType).to.not.be.undefined;
 		});
 	});

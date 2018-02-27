@@ -1,11 +1,11 @@
-const Event = require('../src/index').Event;
+const TelemetryEvent = require('../src/index').TelemetryEvent;
 const EventBody = require('../src/index').EventBody;
 
 describe('Event', () => {
 	var event;
 
 	beforeEach(() => {
-		event = new Event();
+		event = new TelemetryEvent();
 	});
 
 	it('should return self from methods', () => {

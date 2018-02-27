@@ -1,5 +1,5 @@
 const Client = require('../src/index').Client;
-const Event = require('../src/index').Event;
+const TelemetryEvent = require('../src/index').TelemetryEvent;
 const EventBody = require('../src/index').EventBody;
 
 const sinon = require('sinon');
@@ -44,7 +44,7 @@ describe('test suite', () => {
 				endpoint: 'https://somewhere.com'
 			});
 
-			event = new Event();
+			event = new TelemetryEvent();
 			const eventBody = new EventBody();
 			event.setBody(eventBody);
 		});
