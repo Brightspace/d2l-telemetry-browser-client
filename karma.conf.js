@@ -16,6 +16,8 @@ module.exports = function(config) {
 		},
 		frameworks: ['mocha', 'chai', 'browserify'],
 		files: [
+			'node_modules/promise-polyfill/dist/polyfill.js',
+			'node_modules/whatwg-fetch/fetch.js',
 			'test/*'
 		],
 		exclude: [

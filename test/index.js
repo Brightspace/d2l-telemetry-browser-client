@@ -41,7 +41,7 @@ describe('test suite', () => {
 
 		beforeEach(() => {
 			client = new Client({
-				endpoint: 'https://somewhere.com'
+				endpoint: 'https://somewhere.com/'
 			});
 
 			event = new TelemetryEvent();
