@@ -56,10 +56,14 @@ echo "<link rel=\"import\" href=\"../d2l-fetch/d2l-fetch.html\">" >> d2l-telemet
 # Add the updated d2l-telemetry-browser-client.html, and add a new tag to create the release
 git add .
 git commit -m "[skip ci] Update to v${newVersion}"
+
+echo "About to tag new version"
 git tag -a v${newVersion} -m "v${newVersion} - ${lastLogMessageShort}"
 
+echo "git status"
 git status
 
+echo "push new tag"
 git push upstream HEAD:master --tags
 
 # Publish the release via frau-publisher
