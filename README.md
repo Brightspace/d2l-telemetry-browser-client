@@ -19,6 +19,8 @@ The purpose of this library is to make it easier to construct telemetry events m
 
 And then to send the events to the [`Product Telemetry Service`](https://github.com/Brightspace/d2l-telemetry-service)
 
+Note: Some properties defined by the telemetry event schema will be set by the backend service when it handles the event.
+These include: `Version`, `EventId`, `Timestamp`, `TenantId`, `EventBody.Timestamp`, `EventBody.Actor.Id`, `EventBody.TenantUrl`, `EventBody.Browser`.
 
 ## Usage
 
