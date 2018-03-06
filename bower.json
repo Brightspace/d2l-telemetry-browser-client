@@ -21,6 +21,6 @@
     "tests"
   ],
   "dependencies": {
-    "d2l-fetch": "^1.8.0"
+    "d2l-fetch": "brightspace/d2l-fetch#^1.8.0"
   }
 }
