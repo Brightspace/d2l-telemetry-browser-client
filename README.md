@@ -66,7 +66,7 @@ const client = new window.d2lTelemetryBrowserClient.Client({
 const id = 'http://prd.activityfeed.us-east-1.brightspace.com/api/v1/d2l:orgUnit:6614/article/da1e037d-6a51-4d1a-ba3d-fa62fb5e3591';
 
 // EventBody.Object.Id is currently restricted to simple types which do not include ':' characters
-// by current BDP processing. Event though these events are not yet going to BDP, suggestion
+// by current BDP processing. Even though these events are not yet going to BDP, suggestion
 // is to either use an internal identifier or encode the URL.
 // The URL is included as a new EventBody.Object.Url property.
 const eventBody = new window.d2lTelemetryBrowserClient.EventBody()
