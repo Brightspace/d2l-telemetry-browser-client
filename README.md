@@ -4,7 +4,8 @@
 [![Dependency Status][dependencies-image]][dependencies-url]
 
 UI Client for sending telemetry from the browser to a telemetry service.
-The purpose of this library is to make it easier to construct telemetry events matching the standardized schema (Standard Events) for generating product telemetry as defined here:
+
+The purpose of this library is to make it easier to construct telemetry events matching the standardized schema (Standard Events) for generating product telemetry as defined in the links below and then to send the events to the [`Product Telemetry Service`](https://github.com/Brightspace/d2l-telemetry-service).
 
 [`Base schema for UI Telemetry Events`](https://github.com/Brightspace/schema/blob/master/events/ui-telemetry-event-base.json)
 
@@ -21,9 +22,6 @@ As an experiment, there is also a JSON-LD context for defining terms used in Tel
 an exercise to see if there is value in trying to adopt a common vocabulary. The context is modelled after the IMS Caliper context. Note: JSON-LD is not currently used by any component in the event
 processing system, so this is purely documentary at this point.
 [`Experimental Vocabulary`](https://github.com/Brightspace/schema/blob/master/context/context.json)
-
-
-And then to send the events to the [`Product Telemetry Service`](https://github.com/Brightspace/d2l-telemetry-service)
 
 Note: Some properties defined by the telemetry event schema will be set by the backend service when it handles the event.
 These include: `Version`, `EventId`, `Timestamp`, `TenantId`, `EventBody.Timestamp`, `EventBody.Actor.Id`, `EventBody.TenantUrl`, `EventBody.Browser`.
