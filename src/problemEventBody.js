@@ -7,15 +7,15 @@ export class ProblemEventBody extends EventBody {
 	}
 
 	setProblemType(type) {
-		this._type = type;
+		this._problemType = type;
 		return this;
 	}
 
 	toJSON() {
 		const json = super.toJSON();
-		if (this._type) {
+		if (this._problemType) {
 			json.Problem = {
-				Type: this._type
+				problemType: this._problemType
 			};
 		}
 		return json;
