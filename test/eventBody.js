@@ -16,7 +16,7 @@ describe('EventBody', () => {
 		eventBody.setAction('MyAction');
 		eventBody.setTenantUrl('https://some.tenant.com');
 		eventBody.setContext('1', 'Course Offering');
-		eventBody.setObject('2', 'MyObjectType');
+		eventBody.setObject('2', 'MyObjectType', 'http://somewhere.com/resource');
 		eventBody.addActorImsRole('urn:lti:instrole:ims/lis/Instructor');
 		eventBody.addCustom('foo', 'bar');
 		eventBody.setCustomJson({
@@ -35,7 +35,8 @@ describe('EventBody', () => {
 			},
 			Object: {
 				Id: '2',
-				Type: 'MyObjectType'
+				Type: 'MyObjectType',
+				Url: 'http://somewhere.com/resource'
 			},
 			Actor: {
 				ImsRoleIds: [

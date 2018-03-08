@@ -31,10 +31,11 @@ export class EventBody {
 		return this;
 	}
 
-	setObject(id, type) {
+	setObject(id, type, url) {
 		this._object = {
 			Id: id,
-			Type: type
+			Type: type,
+			Url: url
 		};
 		return this;
 	}
