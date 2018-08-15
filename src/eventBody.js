@@ -40,6 +40,15 @@ export class EventBody {
 		return this;
 	}
 
+	setTarget(id, type, url) {
+		this._target = {
+			Id: id,
+			Type: type,
+			Url: url
+		};
+		return this;
+	}
+
 	addActorImsRole(role) {
 		if (!this._actor) {
 			this._actor = {};
@@ -79,6 +88,9 @@ export class EventBody {
 		}
 		if (this._object) {
 			json.Object = this._object;
+		}
+		if (this._target) {
+			json.Target = this._target;
 		}
 		if (this._actor) {
 			json.Actor = this._actor;
