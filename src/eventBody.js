@@ -23,37 +23,50 @@ export class EventBody {
 		return this;
 	}
 
-	setContext(id, type) {
+	setContext(id, type, url, value) {
 		this._context = {
 			Id: id,
-			Type: type
+			Type: type,
+			Url: url,
+			Value: value
 		};
 		return this;
 	}
 
-	setObject(id, type, url) {
+	setObject(id, type, url, value) {
 		this._object = {
 			Id: id,
 			Type: type,
-			Url: url
+			Url: url,
+			Value: value
 		};
 		return this;
 	}
 
-	setTarget(id, type, url) {
+	setTarget(id, type, url, value) {
 		this._target = {
 			Id: id,
 			Type: type,
-			Url: url
+			Url: url,
+			Value: value
 		};
 		return this;
+	}
+
+	setActor(role, requestId, sessionId, cookieId) {
+		this._actor = {
+			ImsRoleIds: role,
+			RequestId: requestId,
+			SessionId: sessionId,
+			CookieId: cookieId
+		};
 	}
 
 	addActorImsRole(role) {
 		if (!this._actor) {
 			this._actor = {};
 		}
-		if (!this._actor.imsRolesIds) {
+		if (!this._actor.ImsRoleIds ) {
 			this._actor.ImsRoleIds = [];
 		}
 		this._actor.ImsRoleIds.push(role);
