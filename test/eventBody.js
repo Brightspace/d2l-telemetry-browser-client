@@ -20,6 +20,7 @@ describe('EventBody', () => {
 		eventBody.setTarget('3', 'MyTargetType', 'http://somewhere.com/target', 'targetValue');
 		eventBody.setActor(['urn:lti:instrole:ims/lis/Learner'], 'theRequestId', 'theSessionId', 'theCookieId');
 		eventBody.addActorImsRole('urn:lti:instrole:ims/lis/Instructor');
+		eventBody.addActorImsRole('urn:lti:instrole:ims/lis/Admin');
 		eventBody.addCustom('foo', 'bar');
 		eventBody.setCustomJson({
 			zinglewaga: {
@@ -52,7 +53,8 @@ describe('EventBody', () => {
 			Actor: {
 				ImsRoleIds: [
 					'urn:lti:instrole:ims/lis/Learner',
-					'urn:lti:instrole:ims/lis/Instructor'
+					'urn:lti:instrole:ims/lis/Instructor',
+					'urn:lti:instrole:ims/lis/Admin'
 				],
 				RequestId: 'theRequestId',
 				SessionId: 'theSessionId',
