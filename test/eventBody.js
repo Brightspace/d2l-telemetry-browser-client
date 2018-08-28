@@ -15,10 +15,12 @@ describe('EventBody', () => {
 		eventBody.setDate(new Date(Date.UTC(96, 1, 2, 3, 4, 5)));
 		eventBody.setAction('MyAction');
 		eventBody.setTenantUrl('https://some.tenant.com');
-		eventBody.setContext('1', 'Course Offering');
-		eventBody.setObject('2', 'MyObjectType', 'http://somewhere.com/resource');
-		eventBody.setTarget('3', 'MyTargetType', 'http://somewhere.com/target');
+		eventBody.setContext('1', 'Course Offering', 'http://somewhere.com/context', 'contextValue');
+		eventBody.setObject('2', 'MyObjectType', 'http://somewhere.com/resource', 'objectValue');
+		eventBody.setTarget('3', 'MyTargetType', 'http://somewhere.com/target', 'targetValue');
+		eventBody.setActor(['urn:lti:instrole:ims/lis/Learner'], 'theRequestId', 'theSessionId', 'theCookieId');
 		eventBody.addActorImsRole('urn:lti:instrole:ims/lis/Instructor');
+		eventBody.addActorImsRole('urn:lti:instrole:ims/lis/Admin');
 		eventBody.addCustom('foo', 'bar');
 		eventBody.setCustomJson({
 			zinglewaga: {
@@ -32,22 +34,31 @@ describe('EventBody', () => {
 			TenantUrl: 'https://some.tenant.com',
 			Context: {
 				Id: '1',
-				Type: 'Course Offering'
+				Type: 'Course Offering',
+				Url: 'http://somewhere.com/context',
+				Value: 'contextValue'
 			},
 			Object: {
 				Id: '2',
 				Type: 'MyObjectType',
-				Url: 'http://somewhere.com/resource'
+				Url: 'http://somewhere.com/resource',
+				Value: 'objectValue'
 			},
 			Target: {
 				Id: '3',
 				Type: 'MyTargetType',
-				Url: 'http://somewhere.com/target'
+				Url: 'http://somewhere.com/target',
+				Value: 'targetValue'
 			},
 			Actor: {
 				ImsRoleIds: [
-					'urn:lti:instrole:ims/lis/Instructor'
-				]
+					'urn:lti:instrole:ims/lis/Learner',
+					'urn:lti:instrole:ims/lis/Instructor',
+					'urn:lti:instrole:ims/lis/Admin'
+				],
+				RequestId: 'theRequestId',
+				SessionId: 'theSessionId',
+				CookieId: 'theCookieId'
 			},
 			Custom: [
 				{
