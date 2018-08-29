@@ -60,6 +60,7 @@ export class EventBody {
 			SessionId: sessionId,
 			CookieId: cookieId
 		};
+		return this;
 	}
 
 	addActorImsRole(role) {
@@ -70,6 +71,7 @@ export class EventBody {
 			this._actor.ImsRoleIds = [];
 		}
 		this._actor.ImsRoleIds.push(role);
+		return this;
 	}
 
 	addCustom(name, value) {
