@@ -24,42 +24,74 @@ export class EventBody {
 	}
 
 	setContext(id, type, url, value) {
-		this._context = {
-			Id: id,
-			Type: type,
-			Url: url,
-			Value: value
-		};
+		this._context = {};
+
+		if (id) {
+			this._context.Id = id;
+		}
+		if (type) {
+			this._context.Type = type;
+		}
+		if (url) {
+			this._context.Url = url;
+		}
+		if (value) {
+			this._context.Value = value;
+		}
 		return this;
 	}
 
 	setObject(id, type, url, value) {
-		this._object = {
-			Id: id,
-			Type: type,
-			Url: url,
-			Value: value
-		};
+		this._object = {};
+
+		if (id) {
+			this._object.Id = id;
+		}
+		if (type) {
+			this._object.Type = type;
+		}
+		if (url) {
+			this._object.Url = url;
+		}
+		if (value) {
+			this._object.Value = value;
+		}
 		return this;
 	}
 
 	setTarget(id, type, url, value) {
-		this._target = {
-			Id: id,
-			Type: type,
-			Url: url,
-			Value: value
-		};
+		this._target = {};
+
+		if (id) {
+			this._target.Id = id;
+		}
+		if (type) {
+			this._target.Type = type;
+		}
+		if (url) {
+			this._target.Url = url;
+		}
+		if (value) {
+			this._target.Value = value;
+		}
 		return this;
 	}
 
 	setActor(role, requestId, sessionId, cookieId) {
-		this._actor = {
-			ImsRoleIds: role,
-			RequestId: requestId,
-			SessionId: sessionId,
-			CookieId: cookieId
-		};
+		this._actor = {};
+
+		if (role) {
+			this._actor.ImsRoleIds = role;
+		}
+		if (requestId) {
+			this._actor.RequestId = requestId;
+		}
+		if (sessionId) {
+			this._actor.SessionId = sessionId;
+		}
+		if (cookieId) {
+			this._actor.CookieId = cookieId;
+		}
 		return this;
 	}
 
