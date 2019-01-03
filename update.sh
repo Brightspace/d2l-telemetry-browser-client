@@ -52,19 +52,8 @@ git config --global user.email "travis@travis-ci.com"
 git config --global user.name "Travis CI"
 
 echo "Updating from ${lastVersion} to v${newVersion}"
-echo "<!-- CHANGES TO THIS FILE WILL BE LOST - IT IS AUTOMATICALLY GENERATED WHEN d2l-telemetry-browser-client IS RELEASED -->" > d2l-telemetry-browser-client.html
-echo "<script src=\"https://s.brightspace.com/lib/d2l-telemetry-browser-client/"$newVersion"/d2l-telemetry-browser-client.js\"></script>" >> d2l-telemetry-browser-client.html
-echo "<link rel=\"import\" href=\"../d2l-fetch/d2l-fetch.html\">" >> d2l-telemetry-browser-client.html
-
-# Add the updated d2l-telemetry-browser-client.html, and add a new tag to create the release
-git add .
-git commit -m "[skip ci] Update to v${newVersion}"
-
 echo "About to tag new version"
 git tag -a v${newVersion} -m "v${newVersion} - ${lastLogMessageShort}"
-
-echo "git status"
-git status
 
 echo "push new tag"
 git push upstream HEAD:master --tags

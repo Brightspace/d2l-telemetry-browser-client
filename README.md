@@ -30,21 +30,23 @@ These include: `Version`, `EventId`, `Timestamp`, `TenantId`, `EventBody.Timesta
 
 ### Setup
 
-Install from Bower:
+Either use `d2l-telemetry-browser-client` from the CDN or import it as an es6 module (assuming your application will transpile it for browsers that don't support es6 classes)
 
-```shell
-bower install Brightspace/d2l-telemetry-browser-client
-```
-
-Then import `d2l-telemetry-browser-client.html`:
+Reference the script in your html:
 
 ```html
-<link rel="import" href="../d2l-telemetry-browser-client/d2l-telemetry-browser-client.html">
+<script type="module" src="../d2l-telemetry-browser-client/d2l-telemetry-browser-client.js"></script>
 ```
 
-The HTML import will reference the library from the CDN, but using bower and html imports will allow you to de-dupe different versions.
+This will add a `d2lTelemetryBrowserClient` object to the global scope.
 
-Alternatively you can reference it directly from the CDN
+Alternatively, you can reference the global d2lTelemetryBrowserClient instance via es6 import
+
+```javascript
+import { d2lTelemetryBrowserClient } from '../d2l-telemetry-browser-client/src/index.js';
+```
+
+We can also reference it directly from the CDN
 
 ```html
 <script src="https://s.brightspace.com/lib/d2l-telemetry-browser-client/0.1.0/d2l-telemetry-browser-client.js"></script>
@@ -100,7 +102,7 @@ The Travis CI build on master branch will bump the version of the library, publi
 
 Refer to `./update.sh` and `./travis.yml` for details on how this publish process works.
 
-You can control the level of verison bump by including either `[increment major]` or `[increment patch]` in your commit message. By default it will increment minor.
+You can control the level of version bump by including either `[increment major]` or `[increment patch]` in your commit message. By default it will increment minor.
 
 
 [ci-url]: https://travis-ci.org/Brightspace/d2l-telemetry-browser-client
