@@ -30,29 +30,27 @@ These include: `Version`, `EventId`, `Timestamp`, `TenantId`, `EventBody.Timesta
 
 ### Setup
 
-Either use `d2l-telemetry-browser-client` from the CDN or import it as an es6 module (assuming your application will transpile it for browsers that don't support es6 classes)
+Install from [NPM]([npm-url]):
 
-Reference the script in your html:
-
-```html
-<script type="module" src="../d2l-telemetry-browser-client/d2l-telemetry-browser-client.js"></script>
+```shell
+npm install d2l-telemetry-browser-client
 ```
 
-This will add a `d2lTelemetryBrowserClient` object to the global scope.
+#### NPM
 
-Alternatively, you can reference the global d2lTelemetryBrowserClient instance via es6 import
+In NPM, require it normally:
 
 ```javascript
-import { d2lTelemetryBrowserClient } from '../d2l-telemetry-browser-client/src/index.js';
+const d2lTelemetryBrowserClient = require('d2l-telemetry-browser-client');
 ```
 
-We can also reference it directly from the CDN
+#### ES6
 
-```html
-<script src="https://s.brightspace.com/lib/d2l-telemetry-browser-client/0.1.0/d2l-telemetry-browser-client.js"></script>
+In ES6, use an `import` statement:
+
+```javascript
+import d2lTelemetryBrowserClient from 'd2l-telemetry-browser-client';
 ```
-
-Finally reference the library using the global variable `d2lTelemetryBrowserClient`
 
 The client uses [`d2l-fetch`](https://github.com/Brightspace/d2l-fetch) for making the API requests to the telemetry service.
 See the [`d2l-fetch browser compatibility`](https://github.com/Brightspace/d2l-fetch#browser-compatibility) instructions for additional requirements.
@@ -61,7 +59,7 @@ See the [`d2l-fetch browser compatibility`](https://github.com/Brightspace/d2l-f
 
 ```js
 
-const client = new window.d2lTelemetryBrowserClient.Client({
+const client = new d2lTelemetryBrowserClient.Client({
   endpoint
 });
 
@@ -71,11 +69,11 @@ const id = 'http://prd.activityfeed.us-east-1.brightspace.com/api/v1/d2l:orgUnit
 // by current BDP processing. Even though these events are not yet going to BDP, suggestion
 // is to either use an internal identifier or encode the URL.
 // The URL is included as a new EventBody.Object.Url property.
-const eventBody = new window.d2lTelemetryBrowserClient.EventBody()
+const eventBody = new d2lTelemetryBrowserClient.EventBody()
   .setAction('Created')
   .setObject(encodeURIComponent(id), 'Article', id);
 
-const event = new window.d2lTelemetryBrowserClient.TelemetryEvent()
+const event = new d2lTelemetryBrowserClient.TelemetryEvent()
   .setDate(new Date())
   .setType('TelemetryEvent')
   .setSourceId('activityfeed')
@@ -94,13 +92,7 @@ yarn install
 yarn run test
 ```
 
-This library builds a de-umdified browserify bundle that is exposed on the global object as `d2lTelemetryBrowserClient`.
-
 ### Publishing
-
-The Travis CI build on master branch will bump the version of the library, publish the dist/ bundle to the CDN and commit an updated `./d2l-telemetry-browser-client.html` html import file referencing the CDN library back to the repo.
-
-Refer to `./update.sh` and `./travis.yml` for details on how this publish process works.
 
 You can control the level of version bump by including either `[increment major]` or `[increment patch]` in your commit message. By default it will increment minor.
 

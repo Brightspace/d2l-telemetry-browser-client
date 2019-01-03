@@ -1,4 +1,3 @@
-'use strict';
 var publisherOptions = require('./package.json').config.frauPublisher;
 publisherOptions.devTag = process.env.TRAVIS_COMMIT || publisherOptions.devTagVar;
 publisherOptions.version = process.env.TRAVIS_TAG;
