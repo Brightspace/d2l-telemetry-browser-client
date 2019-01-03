@@ -30,10 +30,10 @@ These include: `Version`, `EventId`, `Timestamp`, `TenantId`, `EventBody.Timesta
 
 ### Setup
 
-Install from [NPM]([npm-url]):
+Install `d2l-telemetry-browser-client` via NPM:
 
 ```shell
-npm install d2l-telemetry-browser-client
+npm install Brightspace/d2l-telemetry-browser-client
 ```
 
 #### NPM
