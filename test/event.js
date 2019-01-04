@@ -1,5 +1,6 @@
-const TelemetryEvent = require('../src/index').TelemetryEvent;
-const EventBody = require('../src/index').EventBody;
+import d2lTelemetryBrowserClient from '../src/index';
+const TelemetryEvent = d2lTelemetryBrowserClient.TelemetryEvent;
+const EventBody = d2lTelemetryBrowserClient.EventBody;
 
 describe('Event', () => {
 	var event;

@@ -1,6 +1,7 @@
-const Client = require('../src/index').Client;
-const TelemetryEvent = require('../src/index').TelemetryEvent;
-const EventBody = require('../src/index').EventBody;
+import d2lTelemetryBrowserClient from '../src/index';
+const Client = d2lTelemetryBrowserClient.Client;
+const TelemetryEvent = d2lTelemetryBrowserClient.TelemetryEvent;
+const EventBody = d2lTelemetryBrowserClient.EventBody;
 
 const sinon = require('sinon');
 

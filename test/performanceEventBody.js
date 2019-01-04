@@ -1,4 +1,5 @@
-const PerformanceEventBody = require('../src/index').PerformanceEventBody;
+import d2lTelemetryBrowserClient from '../src/index';
+const PerformanceEventBody = d2lTelemetryBrowserClient.PerformanceEventBody;
 
 describe('PerformanceEventBody', () => {
 	var eventBody;

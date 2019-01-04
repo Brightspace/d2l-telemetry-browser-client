@@ -4,7 +4,7 @@ import {EventBody} from './eventBody';
 import {PerformanceEventBody} from './performanceEventBody';
 import {ProblemEventBody} from './problemEventBody';
 
-export {
+export default {
 	Client,
 	TelemetryEvent,
 	EventBody,
