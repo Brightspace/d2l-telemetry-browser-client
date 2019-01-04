@@ -20,9 +20,6 @@ module.exports = function(config) {
 			'node_modules/whatwg-fetch/fetch.js',
 			'test/*'
 		],
-		exclude: [
-			'test/bundle.js'
-		],
 		logLevel: config.LOG_WARN,
 		port: 9876,
 		preprocessors: {

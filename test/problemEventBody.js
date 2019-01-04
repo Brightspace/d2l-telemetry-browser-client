@@ -1,4 +1,5 @@
-const ProblemEventBody = require('../src/index').ProblemEventBody;
+import d2lTelemetryBrowserClient from '../src/index';
+const ProblemEventBody = d2lTelemetryBrowserClient.ProblemEventBody;
 
 describe('ProblemEventBody', () => {
 	var eventBody;
