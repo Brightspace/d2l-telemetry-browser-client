@@ -97,8 +97,8 @@ yarn run test
 You can control the level of version bump by including either `[increment major]` or `[increment patch]` in your commit message. By default it will increment minor.
 
 
-[ci-url]: https://travis-ci.org/Brightspace/d2l-telemetry-browser-client
-[ci-image]: https://travis-ci.org/Brightspace/d2l-telemetry-browser-client.svg
+[ci-url]: https://travis-ci.com/Brightspace/d2l-telemetry-browser-client
+[ci-image]: https://travis-ci.com/Brightspace/d2l-telemetry-browser-client.svg
 [coverage-url]: https://coveralls.io/r/Brightspace/d2l-telemetry-browser-client?branch=master
 [coverage-image]: https://img.shields.io/coveralls/Brightspace/d2l-telemetry-browser-client.svg
 [dependencies-url]: https://david-dm.org/Brightspace/d2l-telemetry-browser-client
