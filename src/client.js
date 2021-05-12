@@ -4,6 +4,10 @@ export class Client {
 	}
 
 	logUserEvent(event) {
+		if (!this.options.endpoint) {
+			return;
+		}
+
 		var requestObject = {
 			method: 'POST'
 		};
