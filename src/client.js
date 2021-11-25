@@ -9,7 +9,8 @@ export class Client {
 		}
 
 		var requestObject = {
-			method: 'POST'
+			method: 'POST',
+			mode: 'no-cors'
 		};
 
 		if (event) {
