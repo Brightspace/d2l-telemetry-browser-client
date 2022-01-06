@@ -9,13 +9,13 @@ The purpose of this library is to make it easier to construct telemetry events m
 
 [`Base schema for UI Telemetry Events`](https://github.com/Brightspace/schema/blob/master/events/ui-telemetry-event-base.json)
 
-[`UI Telemetry Event Schema`](https://github.com/Brightspace/schema/blob/master/events/ui-telemetry-event.json)
+[`UI Telemetry Event Schema`](https://github.com/Brightspace/schema/blob/master/src/events/ui-telemetry-event.json)
 [`Example UI Telemetry Event`](https://github.com/Brightspace/schema/blob/master/test/ui-telemetry-event.js)
 
-[`UI Performance Event Schema`](https://github.com/Brightspace/schema/blob/master/events/ui-performance-event.json)
+[`UI Performance Event Schema`](https://github.com/Brightspace/schema/blob/master/src/events/ui-performance-event.json)
 [`Example UI Performance Event`](https://github.com/Brightspace/schema/blob/master/test/ui-peformance-event.js)
 
-[`UI Problem Event Schema`](https://github.com/Brightspace/schema/blob/master/events/ui-problem-event.json)
+[`UI Problem Event Schema`](https://github.com/Brightspace/schema/blob/master/src/events/ui-problem-event.json)
 [`Example UI Problem Event`](https://github.com/Brightspace/schema/blob/master/test/ui-problem-event.js)
 
 As an experiment, there is also a JSON-LD context for defining terms used in TelemetryEvents. This is
@@ -97,8 +97,8 @@ yarn run test
 You can control the level of version bump by including either `[increment major]` or `[increment patch]` in your commit message. By default it will increment minor.
 
 
-[ci-url]: https://travis-ci.com/Brightspace/d2l-telemetry-browser-client
-[ci-image]: https://travis-ci.com/Brightspace/d2l-telemetry-browser-client.svg
+[ci-url]: https://app.travis-ci.com/Brightspace/d2l-telemetry-browser-client
+[ci-image]: https://app.travis-ci.com/Brightspace/d2l-telemetry-browser-client.svg?branch=master
 [coverage-url]: https://coveralls.io/r/Brightspace/d2l-telemetry-browser-client?branch=master
 [coverage-image]: https://img.shields.io/coveralls/Brightspace/d2l-telemetry-browser-client.svg
 [dependencies-url]: https://david-dm.org/Brightspace/d2l-telemetry-browser-client
