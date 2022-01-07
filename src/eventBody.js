@@ -27,7 +27,7 @@ export class EventBody {
 		this._context = {};
 
 		if (id) {
-			this._context.Id = id;
+			this._context.Id = id.toString();
 		}
 		if (type) {
 			this._context.Type = type;
