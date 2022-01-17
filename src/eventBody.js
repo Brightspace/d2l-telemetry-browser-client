@@ -45,7 +45,7 @@ export class EventBody {
 		this._object = {};
 
 		if (id) {
-			this._object.Id = id.toString();;
+			this._object.Id = id.toString();
 		}
 		if (type) {
 			this._object.Type = type;
@@ -63,7 +63,7 @@ export class EventBody {
 		this._target = {};
 
 		if (id) {
-			this._target.Id = id.toString();;
+			this._target.Id = id.toString();
 		}
 		if (type) {
 			this._target.Type = type;
