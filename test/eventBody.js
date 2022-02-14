@@ -74,6 +74,11 @@ describe('EventBody', () => {
 			}
 		});
 	});
+
+	it('should reject invalid url', () =>{
+		expect(()=>eventBody.setContext('1', 'Course Offering', '/context', 'contextValue')).to.throw();
+	});
+
 	it('should generate JSON body (using chaining)', () => {
 		eventBody.setDate(new Date(Date.UTC(96, 1, 2, 3, 4, 5)))
 			.setAction('MyAction')

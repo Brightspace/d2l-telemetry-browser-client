@@ -1,3 +1,16 @@
+const stringIsValidUrl = (s, protocols) => {
+	try {
+		const url = new URL(s);
+		return protocols
+			? url.protocol
+				? protocols.map(x => `${x.toLowerCase()}:`).includes(url.protocol)
+				: false
+			: true;
+	} catch (err) {
+		return false;
+	}
+};
+
 export class EventBody {
 	constructor() {
 		this._eventTypeGuid = 'd6b021b6-ffa2-4ee8-8206-8710e04396ce';
@@ -33,6 +46,9 @@ export class EventBody {
 			this._context.Type = type;
 		}
 		if (url) {
+			if (!stringIsValidUrl(url, ['http', 'https'])) {
+				throw new Error('url is not in absolute format');
+			}
 			this._context.Url = url;
 		}
 		if (value) {
