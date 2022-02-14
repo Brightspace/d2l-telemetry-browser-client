@@ -13,7 +13,7 @@ The purpose of this library is to make it easier to construct telemetry events m
 [`Example UI Telemetry Event`](https://github.com/Brightspace/schema/blob/master/test/ui-telemetry-event.js)
 
 [`UI Performance Event Schema`](https://github.com/Brightspace/schema/blob/master/src/events/ui-performance-event.json)
-[`Example UI Performance Event`](https://github.com/Brightspace/schema/blob/master/test/ui-peformance-event.js)
+[`Example UI Performance Event`](https://github.com/Brightspace/schema/blob/master/test/ui-performance-event.js)
 
 [`UI Problem Event Schema`](https://github.com/Brightspace/schema/blob/master/src/events/ui-problem-event.json)
 [`Example UI Problem Event`](https://github.com/Brightspace/schema/blob/master/test/ui-problem-event.js)
