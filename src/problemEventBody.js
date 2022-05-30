@@ -1,4 +1,4 @@
-import {EventBody} from './eventBody';
+import { EventBody } from './eventBody.js';
 
 export class ProblemEventBody extends EventBody {
 	constructor() {

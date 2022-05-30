@@ -1,9 +1,10 @@
-import d2lTelemetryBrowserClient from '../src/index';
+import d2lTelemetryBrowserClient from '../src/index.js';
+import { expect } from '@open-wc/testing';
+import sinon from 'sinon';
+
 const Client = d2lTelemetryBrowserClient.Client;
 const TelemetryEvent = d2lTelemetryBrowserClient.TelemetryEvent;
 const EventBody = d2lTelemetryBrowserClient.EventBody;
-
-const sinon = require('sinon');
 
 describe('test suite', () => {
 
@@ -23,11 +24,11 @@ describe('test suite', () => {
 	});
 
 	describe('logUserEvent', () => {
-		var fetch, client, event;
+		let fetch, client, event;
 
 		before(() => {
 			fetch = sinon.stub(window.d2lfetch, 'fetch');
-			var promise = Promise.resolve({
+			const promise = Promise.resolve({
 				ok: true,
 				json: function() {
 					return Promise.resolve();
@@ -62,15 +63,15 @@ describe('test suite', () => {
 
 		it ('populates the event body', () => {
 			client.logUserEvent(event);
-			var request = fetch.args[0][0];
-			return request.json().then(function(data) {
+			const request = fetch.args[0][0];
+			return request.json().then((data) => {
 				expect(data.EventBody.EventTypeGuid).to.equal('d6b021b6-ffa2-4ee8-8206-8710e04396ce');
 			});
 		});
 	});
 
 	describe('logUserEvent - with null endpoint', () => {
-		var fetch, client, event;
+		let fetch, client, event;
 
 		before(() => {
 			client = new Client({
@@ -82,7 +83,7 @@ describe('test suite', () => {
 			event.setBody(eventBody);
 
 			fetch = sinon.stub(window.d2lfetch, 'fetch');
-			var promise = Promise.resolve({
+			const promise = Promise.resolve({
 				ok: true,
 				json: function() {
 					return Promise.resolve();
