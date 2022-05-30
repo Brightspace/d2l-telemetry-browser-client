@@ -1,8 +1,10 @@
-import d2lTelemetryBrowserClient from '../src/index';
+import d2lTelemetryBrowserClient from '../src/index.js';
+import { expect } from '@open-wc/testing';
+
 const EventBody = d2lTelemetryBrowserClient.EventBody;
 
 describe('EventBody', () => {
-	var eventBody;
+	let eventBody;
 
 	beforeEach(() => {
 		eventBody = new EventBody();

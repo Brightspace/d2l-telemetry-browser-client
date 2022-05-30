@@ -1,4 +1,4 @@
-import {EventBody} from './eventBody';
+import { EventBody } from './eventBody.js';
 
 function ensureArray(value) {
 	if (!Array.isArray(value)) {

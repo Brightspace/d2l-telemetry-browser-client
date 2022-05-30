@@ -99,7 +99,7 @@ export class EventBody {
 		if (!this._actor) {
 			this._actor = {};
 		}
-		if (!this._actor.ImsRoleIds ) {
+		if (!this._actor.ImsRoleIds) {
 			this._actor.ImsRoleIds = [];
 		}
 		this._actor.ImsRoleIds.push(role);
