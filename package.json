@@ -22,9 +22,6 @@
     "/src",
     "d2l-telemetry-browser-client.js"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "devDependencies": {
     "@babel/core": "^7",
     "@babel/eslint-parser": "^7",
