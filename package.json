@@ -9,8 +9,8 @@
     "lint": "npm run lint:js",
     "lint:js": "eslint . --ext .js,.html test/**/*.js",
     "test": "npm run lint && npm run test:headless",
-    "test:headless": "web-test-runner --group default",
-    "test:headless:watch": "web-test-runner --group default --watch"
+    "test:headless": "web-test-runner test/**/*.test.js --node-resolve --group default",
+    "test:headless:watch": "web-test-runner test/**/*.test.js --node-resolve --group default --watch"
   },
   "repository": {
     "type": "git",
