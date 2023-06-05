@@ -4,16 +4,16 @@ UI Client for sending telemetry from the browser to a telemetry service.
 
 The purpose of this library is to make it easier to construct telemetry events matching the standardized schema (Standard Events) for generating product telemetry as defined in the links below and then to send the events to the [`Product Telemetry Service`](https://github.com/Brightspace/d2l-telemetry-service).
 
-[`Base schema for UI Telemetry Events`](https://github.com/Brightspace/schema/blob/master/events/ui-telemetry-event-base.json)
+[`Base schema for UI Telemetry Events`](https://github.com/Brightspace/schema/blob/master/src/events/ui-telemetry-event/ui-telemetry-event-base.json)
 
-[`UI Telemetry Event Schema`](https://github.com/Brightspace/schema/blob/master/src/events/ui-telemetry-event.json)
-[`Example UI Telemetry Event`](https://github.com/Brightspace/schema/blob/master/test/ui-telemetry-event.js)
+[`UI Telemetry Event Schema`](https://github.com/Brightspace/schema/blob/master/src/events/ui-telemetry-event/ui-telemetry-event.json)
+[`Example UI Telemetry Event`](https://github.com/Brightspace/schema/blob/master/test/events/ui-telemetry-event/ui-telemetry-event.js)
 
-[`UI Performance Event Schema`](https://github.com/Brightspace/schema/blob/master/src/events/ui-performance-event.json)
-[`Example UI Performance Event`](https://github.com/Brightspace/schema/blob/master/test/ui-performance-event.js)
+[`UI Performance Event Schema`](https://github.com/Brightspace/schema/blob/master/src/events/ui-performance-event/ui-performance-event.json)
+[`Example UI Performance Event`](https://github.com/Brightspace/schema/blob/master/test/events/ui-performance-event/ui-performance-event.js)
 
-[`UI Problem Event Schema`](https://github.com/Brightspace/schema/blob/master/src/events/ui-problem-event.json)
-[`Example UI Problem Event`](https://github.com/Brightspace/schema/blob/master/test/ui-problem-event.js)
+[`UI Problem Event Schema`](https://github.com/Brightspace/schema/blob/master/src/events/ui-problem-event/ui-problem-event.json)
+[`Example UI Problem Event`](https://github.com/Brightspace/schema/blob/master/test/events/ui-problem-event/ui-problem-event.js)
 
 As an experiment, there is also a JSON-LD context for defining terms used in TelemetryEvents. This is
 an exercise to see if there is value in trying to adopt a common vocabulary. The context is modelled after the IMS Caliper context. Note: JSON-LD is not currently used by any component in the event
