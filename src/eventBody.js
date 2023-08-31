@@ -77,6 +77,17 @@ export class EventBody {
 		return this;
 	}
 
+	setActivity(id, type) {
+		this._activity = {};
+
+		if (id) {
+			this._activity.Id = id.toString();
+		}
+		if (type) {
+			this._activity.Type = type;
+		}
+	}
+
 	setActor(role, requestId, sessionId, cookieId) {
 		this._actor = {};
 
@@ -132,6 +143,9 @@ export class EventBody {
 		}
 		if (this._context) {
 			json.Context = this._context;
+		}
+		if (this._activity) {
+			json.Activity = this._activity;
 		}
 		if (this._object) {
 			json.Object = this._object;
