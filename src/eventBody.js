@@ -86,6 +86,7 @@ export class EventBody {
 		if (type) {
 			this._activity.Type = type;
 		}
+		return this;
 	}
 
 	setActor(role, requestId, sessionId, cookieId) {
