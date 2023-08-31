@@ -19,6 +19,7 @@ describe('EventBody', () => {
 		eventBody.setAction('MyAction');
 		eventBody.setTenantUrl('https://some.tenant.com');
 		eventBody.setContext('1', 'Course Offering', 'http://somewhere.com/context', 'contextValue');
+		eventBody.setActivity('123', 'MyActivity');
 		eventBody.setObject('2', 'MyObjectType', 'http://somewhere.com/resource', 'objectValue');
 		eventBody.setTarget('3', 'MyTargetType', 'http://somewhere.com/target', 'targetValue');
 		eventBody.setActor(['urn:lti:instrole:ims/lis/Learner'], 'theRequestId', 'theSessionId', 'theCookieId');
@@ -40,6 +41,10 @@ describe('EventBody', () => {
 				Type: 'Course Offering',
 				Url: 'http://somewhere.com/context',
 				Value: 'contextValue'
+			},
+			Activity: {
+				Id: '123',
+				Type: 'MyActivity'
 			},
 			Object: {
 				Id: '2',
@@ -81,6 +86,7 @@ describe('EventBody', () => {
 			.setAction('MyAction')
 			.setTenantUrl('https://some.tenant.com')
 			.setContext('1', 'Course Offering', 'http://somewhere.com/context', 'contextValue')
+			.setActivity('123', 'MyActivity')
 			.setObject('2', 'MyObjectType', 'http://somewhere.com/resource', 'objectValue')
 			.setTarget('3', 'MyTargetType', 'http://somewhere.com/target', 'targetValue')
 			.setActor(['urn:lti:instrole:ims/lis/Learner'], 'theRequestId', 'theSessionId', 'theCookieId')
@@ -102,6 +108,10 @@ describe('EventBody', () => {
 				Type: 'Course Offering',
 				Url: 'http://somewhere.com/context',
 				Value: 'contextValue'
+			},
+			Activity: {
+				Id: '123',
+				Type: 'MyActivity'
 			},
 			Object: {
 				Id: '2',
