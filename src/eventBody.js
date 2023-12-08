@@ -107,6 +107,18 @@ export class EventBody {
 		return this;
 	}
 
+	setGenerated(id, type) {
+		this._generated = {};
+
+		if (id) {
+			this._generated.Id = id.toString();
+		}
+		if (type) {
+			this._generated.Type = type;
+		}
+		return this;
+	}
+
 	addActorImsRole(role) {
 		if (!this._actor) {
 			this._actor = {};
@@ -156,6 +168,9 @@ export class EventBody {
 		}
 		if (this._actor) {
 			json.Actor = this._actor;
+		}
+		if (this._generated) {
+			json.Generated = this._generated;
 		}
 		if (this._custom) {
 			json.Custom = this._custom;
