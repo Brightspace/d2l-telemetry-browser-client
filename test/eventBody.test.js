@@ -25,6 +25,7 @@ describe('EventBody', () => {
 		eventBody.setActor(['urn:lti:instrole:ims/lis/Learner'], 'theRequestId', 'theSessionId', 'theCookieId');
 		eventBody.addActorImsRole('urn:lti:instrole:ims/lis/Instructor');
 		eventBody.addActorImsRole('urn:lti:instrole:ims/lis/Admin');
+		eventBody.setGenerated('123-456', 'GenerationRequestId');
 		eventBody.addCustom('foo', 'bar');
 		eventBody.setCustomJson({
 			zinglewaga: {
@@ -68,6 +69,10 @@ describe('EventBody', () => {
 				SessionId: 'theSessionId',
 				CookieId: 'theCookieId'
 			},
+			Generated: {
+				Id: '123-456',
+				Type: 'GenerationRequestId'
+			},
 			Custom: [
 				{
 					name: 'foo',
@@ -92,6 +97,7 @@ describe('EventBody', () => {
 			.setActor(['urn:lti:instrole:ims/lis/Learner'], 'theRequestId', 'theSessionId', 'theCookieId')
 			.addActorImsRole('urn:lti:instrole:ims/lis/Instructor')
 			.addActorImsRole('urn:lti:instrole:ims/lis/Admin')
+			.setGenerated('123-456', 'GenerationRequestId')
 			.addCustom('foo', 'bar')
 			.setCustomJson({
 				zinglewaga: {
@@ -134,6 +140,10 @@ describe('EventBody', () => {
 				RequestId: 'theRequestId',
 				SessionId: 'theSessionId',
 				CookieId: 'theCookieId'
+			},
+			Generated: {
+				Id: '123-456',
+				Type: 'GenerationRequestId'
 			},
 			Custom: [
 				{
