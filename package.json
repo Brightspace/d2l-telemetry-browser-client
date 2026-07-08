@@ -34,5 +34,8 @@
     "eslint-plugin-lit": "^1",
     "eslint-plugin-sort-class-members": "^1",
     "sinon": "^14"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
